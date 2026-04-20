@@ -41,7 +41,6 @@ plugins accordingly.
 |---|---|---|---|---|
 | Psyerns Framework | `psyerns-framework` | 1.0.0 | Stable | _coming soon_ |
 | Psyerns AuctionHouse | `psyerns-auctionhouse` | 1.0.0 | Initial Release | [Psyerns_AuctionHouse_Plugin](https://github.com/Psyern/Psyerns_AuctionHouse_Plugin) |
-| Psyerns Leaderboard | `psyerns-leaderboard` | 1.0.0 | Initial Release | [Psyerns_Leaderboard_Plugin](https://github.com/Psyern/Psyerns_Leaderboard_Plugin) |
 
 ---
 
