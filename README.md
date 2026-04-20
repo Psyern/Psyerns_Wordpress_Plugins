@@ -9,12 +9,39 @@ index — it contains no plugin code.
 
 ---
 
+## Requirements
+
+The WordPress plugins in this suite are **data consumers**. They do not
+read DayZ server state directly — all data (listings, transactions,
+leaderboards, balances, etc.) is transmitted **from the DayZ server into
+WordPress** via HTTPS.
+
+To enable that data flow, the DayZ server must run the companion mod
+[Psyerns_Framework](https://github.com/Psyern/Psyerns-Framework), which
+ships the shared REST client (`PF_WebClient`) and per-feature integration
+modules (`PF_AH_Sync` for AuctionHouse, `PF_LeaderboardExport` for the
+Leaderboard, etc.).
+
+Without the Psyerns_Framework mod installed and configured on the DayZ
+server, the WordPress plugins will show empty states — they have no
+other way to receive data.
+
+**Authentication.** The DayZ server holds a single API key in its
+Psyerns_Framework mod configuration. Every WordPress plugin that should
+receive data from that server must have the **same API key** entered in
+its own admin settings — each plugin validates incoming requests against
+it independently. If you rotate the key on the mod side, update all WP
+plugins accordingly.
+
+---
+
 ## Plugins
 
 | Plugin | Slug | Version | Status | Repository |
 |---|---|---|---|---|
 | Psyerns Framework | `psyerns-framework` | 1.0.0 | Stable | _coming soon_ |
 | Psyerns AuctionHouse | `psyerns-auctionhouse` | 1.0.0 | Initial Release | [Psyerns_AuctionHouse_Plugin](https://github.com/Psyern/Psyerns_AuctionHouse_Plugin) |
+| Psyerns Leaderboard | `psyerns-leaderboard` | 1.0.0 | Initial Release | [Psyerns_Leaderboard_Plugin](https://github.com/Psyern/Psyerns_Leaderboard_Plugin) |
 
 ---
 
